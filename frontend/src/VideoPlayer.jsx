@@ -44,7 +44,10 @@ export const VideoPlayer = (props) => {
   }, [playerRef]);
 
   return (
-    <div data-vjs-player style={{ width: "600px" }}>
+    <div
+      data-vjs-player
+      style={{ width: "600px" }}
+    >
       <div ref={videoRef} />
     </div>
   );

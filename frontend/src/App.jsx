@@ -1,7 +1,9 @@
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
-import { VideoPlayer } from "./VideoPlayer";
+import VideoPlayer from "./VideoPlayer";
 import { useRef } from "react";
-import videojs from "video.js";
 
 function App() {
   const playerRef = useRef(null);
@@ -19,7 +21,6 @@ function App() {
       },
     ],
   };
-
   const handlePlayerReady = (player) => {
     playerRef.current = player;
 
@@ -32,7 +33,6 @@ function App() {
       videojs.log("player will dispose");
     });
   };
-
   return (
     <>
       <div>
